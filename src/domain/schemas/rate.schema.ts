@@ -18,7 +18,7 @@ export const PackageDimensionsSchema = z.object({
 
 export const PackageSchema = z.object({
     weight: z.number().positive(),
-    weigthUnit: z.enum(["LB", "KG"]),
+    weightUnit: z.enum(["LB", "KG"]),
     dimensions: PackageDimensionsSchema.optional(),
 })
 
@@ -26,5 +26,5 @@ export const RateRequestSchema = z.object({
     origin: AddressSchema,
     destination: AddressSchema,
     packages: z.array(PackageSchema).min(1),
-    serviceLevel: z.enum(["GROUND", "TWO_DAY", "NEXT_DAY"]).optional(),
+    serviceLevel: z.enum(["GROUND", "TWO_DAY", "NEXT_DAY"]),
 })

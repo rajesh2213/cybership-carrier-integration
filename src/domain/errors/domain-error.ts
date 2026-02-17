@@ -4,5 +4,7 @@ export class DomainValidationError extends Error {
         public readonly issues: unknown
     ) {
         super(message);
+        this.name = "DomainValidationError";
+        Object.setPrototypeOf(this, DomainValidationError.prototype);
     }
 }

@@ -18,7 +18,7 @@ export interface PackageDimensions {
 
 export interface Package {
     weight: number;
-    weigthUnit: "LB" | "KG";
+    weightUnit: "LB" | "KG";
     dimensions?: PackageDimensions;
 }
 
