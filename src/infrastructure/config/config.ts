@@ -14,4 +14,5 @@ export const config = {
     upsClientId: requireEnv("UPS_CLIENT_ID"),
     upsClientSecret: requireEnv("UPS_CLIENT_SECRET"),
     upsBaseUrl: requireEnv("UPS_BASE_URL"),
+    upsRatingVersion: process.env.UPS_RATING_VERSION ?? "v2409",
 }
